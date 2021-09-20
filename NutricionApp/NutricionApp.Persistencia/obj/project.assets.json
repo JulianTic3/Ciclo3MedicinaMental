@@ -2068,6 +2068,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "NutricionApp.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/NutricionApp.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NutricionApp.Dominio.dll": {}
+        }
       }
     }
   },
@@ -7236,6 +7246,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "NutricionApp.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../NutricionApp.Dominio/NutricionApp.Dominio.csproj",
+      "msbuildProject": "../NutricionApp.Dominio/NutricionApp.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7243,7 +7258,8 @@
       "Microsoft.EntityFrameWorkCore >= 5.0.0",
       "Microsoft.EntityFrameWorkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameWorkCore.SqlServer >= 5.0.0",
-      "Microsoft.EntityFrameWorkCore.Tools >= 5.0.0"
+      "Microsoft.EntityFrameWorkCore.Tools >= 5.0.0",
+      "NutricionApp.Dominio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7269,7 +7285,11 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj": {
+              "projectPath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
