@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "5HGQujMvFRGuP+qioGhHLuwNUSii4RGz8p2d13wF97qudFkd+vqzFzEaUnm9PgdawyHzfUN2faqkPLleOYEjpw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jaaos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\jaaos\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
