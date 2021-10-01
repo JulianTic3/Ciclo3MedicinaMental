@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj": {}
+    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj": {
+    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj",
+        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj",
         "projectName": "NutricionApp.Dominio",
-        "projectPath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj",
-        "packagesPath": "C:\\Users\\jaaos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\obj\\",
+        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jaaos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -53,7 +53,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.118\\RuntimeIdentifierGraph.json"
         }
       }
     }

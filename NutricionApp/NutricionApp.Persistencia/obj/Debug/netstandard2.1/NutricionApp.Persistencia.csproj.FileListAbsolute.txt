@@ -1,12 +1,22 @@
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.deps.json
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.dll
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.pdb
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\bin\Debug\netstandard2.1\NutricionApp.Dominio.dll
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\bin\Debug\netstandard2.1\NutricionApp.Dominio.pdb
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csprojAssemblyReference.cache
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.AssemblyInfoInputs.cache
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.AssemblyInfo.cs
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csproj.CoreCompileInputs.cache
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csproj.CopyComplete
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.dll
-C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.deps.json
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Dominio.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Dominio.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csprojAssemblyReference.cache
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.AssemblyInfoInputs.cache
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.AssemblyInfo.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csproj.CopyComplete
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\NutricionApp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.deps.json
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Persistencia.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Dominio.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\bin\Debug\netstandard2.1\NutricionApp.Dominio.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csprojAssemblyReference.cache
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.AssemblyInfoInputs.cache
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.AssemblyInfo.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.csproj.CopyComplete
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.persistencia\obj\Debug\netstandard2.1\NutricionApp.Persistencia.pdb

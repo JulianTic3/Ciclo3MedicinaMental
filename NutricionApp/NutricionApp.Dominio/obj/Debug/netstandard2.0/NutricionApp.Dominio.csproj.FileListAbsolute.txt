@@ -7,3 +7,11 @@ C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3Seguimie
 C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.dll
 C:\Users\jaaos\Documents\MisionTic\Ciclo 3\Desarrollo de Software\Ciclo3SeguimientoNutricional\NutricionApp\NutricionApp.Dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\bin\Debug\netstandard2.0\NutricionApp.Dominio.deps.json
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\bin\Debug\netstandard2.0\NutricionApp.Dominio.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\bin\Debug\netstandard2.0\NutricionApp.Dominio.pdb
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.csprojAssemblyReference.cache
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.AssemblyInfoInputs.cache
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.AssemblyInfo.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.dll
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.dominio\obj\Debug\netstandard2.0\NutricionApp.Dominio.pdb
