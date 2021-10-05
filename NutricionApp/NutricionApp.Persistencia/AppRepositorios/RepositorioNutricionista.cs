@@ -2,16 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NutricionApp.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace NutricionApp.Persistencia
 {
   public class RepositorioNutricionista : IRepositorioNutricionista
   {
-    private readonly AppContext _appContext;
-    public RepositorioNutricionista(AppContext appContext)
-    {
-      _appContext = appContext;
-    }
+    private readonly AppContext _appContext = new AppContext();
+
     public Nutricionista AddNutricionista(Nutricionista Nutricionista)
     {
       var NutricionistaAdicionado = _appContext.Nutricionistas.Add(Nutricionista);

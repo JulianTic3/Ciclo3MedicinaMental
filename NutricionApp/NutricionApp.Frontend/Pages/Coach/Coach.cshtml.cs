@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NutricionApp.Persistencia;
 using NutricionApp.Dominio;
+using NutricionApp.Persistencia;
 
 namespace NutricionApp.Frontend.Pages
 {
@@ -13,9 +14,10 @@ namespace NutricionApp.Frontend.Pages
   {
     private readonly IRepositorioCoach _RepoCoach;
     public IEnumerable<Coach> Coaches { get; set; }
-    public CoachModel(IRepositorioCoach RepoCoach) // metodo constructor
+
+    public CoachModel(IRepositorioCoach _RepoCoach) // metodo constructor
     {
-      this._RepoCoach = RepoCoach;
+      this._RepoCoach = _RepoCoach;
     }
 
     public void OnGet()

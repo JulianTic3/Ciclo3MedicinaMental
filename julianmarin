@@ -1,0 +1,35 @@
+[33mcommit d7bc5c7d910a3fd647fa9f739e2df7878835afa1[m[33m ([m[1;36mHEAD -> [m[1;32mJulianMarin[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/JulianMarin[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Julian Marin <julyma01@hotmail.com>
+Date:   Wed Sep 22 09:03:03 2021 -0500
+
+    Ingreso de clases en dominio
+
+[33mcommit be488ce1074b43785f19f80294b44dbd54262ffd[m
+Author: Julian Marin <julyma01@hotmail.com>
+Date:   Tue Sep 21 18:54:33 2021 -0500
+
+    Primera descarga Github
+
+[33mcommit 4b07a015bb5b766684717b4244de2bd6eea63fe0[m
+Author: Jdrew92 <darkkhir0@gmail.com>
+Date:   Mon Sep 20 09:33:49 2021 -0500
+
+    Build 1, referencia a dominio, folders AppData y AppRepositorios
+
+[33mcommit 725d5e555ceaabaf1054d2ca867546b1fae9f00f[m
+Author: Jdrew92 <darkkhir0@gmail.com>
+Date:   Mon Sep 20 09:29:09 2021 -0500
+
+    Instalacion de paquetes EF
+
+[33mcommit 9379d906074eba0c67b53d83b34ee2415a77407f[m
+Author: Jdrew92 <darkkhir0@gmail.com>
+Date:   Mon Sep 20 09:17:05 2021 -0500
+
+    Se crean los proyectos de dominio, persistencia, servicios y consola
+
+[33mcommit af8b025c97290ca44fddd6892eab7d6b2c85da8a[m
+Author: Jdrew92 <darkkhir0@gmail.com>
+Date:   Thu Sep 16 10:52:43 2021 -0500
+
+    Primer Commit

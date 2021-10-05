@@ -1,16 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using NutricionApp.Dominio;
+
 namespace NutricionApp.Persistencia
 {
   public class RepositorioCoach : IRepositorioCoach
   {
-    private readonly AppContext _appContext;
-
-    public RepositorioCoach(AppContext appContext)
-    {
-      _appContext = appContext;
-    }
+    private readonly AppContext _appContext = new AppContext();
     IEnumerable<Coach> IRepositorioCoach.GetAllCoachs()
     {
       return _appContext.Coachs;

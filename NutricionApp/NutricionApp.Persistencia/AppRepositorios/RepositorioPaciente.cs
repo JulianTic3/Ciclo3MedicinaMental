@@ -7,11 +7,7 @@ namespace NutricionApp.Persistencia
 {
   public class RepositorioPaciente : IRepositorioPaciente
   {
-    private readonly AppContext _appContext;
-    public RepositorioPaciente(AppContext appContext)
-    {
-      _appContext = appContext;
-    }
+    private readonly AppContext _appContext = new AppContext();
     public Paciente AddPaciente(Paciente Paciente)
     {
       var PacienteAdicionado = _appContext.Pacientes.Add(Paciente);

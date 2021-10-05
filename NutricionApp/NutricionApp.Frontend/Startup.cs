@@ -25,8 +25,7 @@ namespace NutricionApp.Frontend
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddRazorPages();
-     // services.AddSingleton<IRepositorioCoach, RepositorioCoach>();
-
+      services.AddSingleton<IRepositorioNutricionista, RepositorioNutricionista>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,35 @@
+﻿@page
+@model NutricionApp.Frontend.Pages.Nutricionistas.ListaModel
+@{
+}
+
+<a class="btn btn-primary" asp-page="./Crear">Crear nuevo Nutricionista</a>
+<br>
+<br>
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Correo Electrónico</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Tarjeta Profesional</th>
+      <th scope="col">Actualización</th>
+      <th scope="col">Elminación</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var p in Model.Nutricionista)
+    {
+      <tr>
+        <td>@p.Nombre</td>
+        <td>@p.Apellidos</td>
+        <td>@p.Correo</td>
+        <td>@p.Telefono</td>
+        <td>@p.TarjetaProfesional</td>
+        <td><a class="btn btn-secondary" asp-page="./Actualizar" asp-route-Id="@p.Id">Editar</a></td>
+        <td><a class="btn btn-danger" asp-page="./Eliminar" asp-route-Id="@p.Id">Borrar</a></td>
+      </tr>
+    }
+  </tbody>
+</table>

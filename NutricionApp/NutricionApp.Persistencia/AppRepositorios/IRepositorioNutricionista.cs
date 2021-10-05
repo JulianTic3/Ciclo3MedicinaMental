@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using NutricionApp.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace NutricionApp.Persistencia
 {
