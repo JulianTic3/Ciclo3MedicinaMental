@@ -7263,19 +7263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jaaos\\.nuget\\packages\\": {}
+    "C:\\Users\\Jorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Persistencia\\NutricionApp.Persistencia.csproj",
+      "projectUniqueName": "D:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Persistencia\\NutricionApp.Persistencia.csproj",
       "projectName": "NutricionApp.Persistencia",
-      "projectPath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Persistencia\\NutricionApp.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\jaaos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Persistencia\\obj\\",
+      "projectPath": "D:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Persistencia\\NutricionApp.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jaaos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -7285,9 +7285,10 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj": {
-              "projectPath": "C:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj"
+            "D:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj": {
+              "projectPath": "D:\\Users\\jaaos\\Documents\\MisionTic\\Ciclo 3\\Desarrollo de Software\\Ciclo3SeguimientoNutricional\\NutricionApp\\NutricionApp.Dominio\\NutricionApp.Dominio.csproj"
             }
           }
         }
@@ -7300,6 +7301,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameWorkCore": {
             "target": "Package",
@@ -7337,7 +7339,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
