@@ -6,7 +6,5 @@ namespace NutricionApp.Dominio
     public int Id { get; set; }
     public DateTime Fecha { get; set; }
     public string Descripcion { get; set; }
-    public Historia Historia { get; set; }
-    public Nutricionista Nutricionista { get; set; }
   }
 }

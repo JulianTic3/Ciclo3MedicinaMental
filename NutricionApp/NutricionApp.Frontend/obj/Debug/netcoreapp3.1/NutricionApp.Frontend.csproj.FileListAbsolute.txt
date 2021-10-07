@@ -163,3 +163,7 @@ D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\n
 D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Nutricionistas\Crear.cshtml.g.cs
 D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Nutricionistas\Actualizar.cshtml.g.cs
 D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Nutricionistas\Eliminar.cshtml.g.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidado\Actualizar.cshtml.g.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidado\Crear.cshtml.g.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidado\Eliminar.cshtml.g.cs
+D:\Documentos\Julian Marin\Programacion\Nutricion\Ciclo3SeguimientoNutricional\nutricionapp\nutricionapp.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\SugerenciasCuidado\Lista.cshtml.g.cs

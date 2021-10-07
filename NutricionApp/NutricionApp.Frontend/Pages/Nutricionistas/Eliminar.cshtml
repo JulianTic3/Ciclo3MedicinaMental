@@ -2,6 +2,7 @@
 @model NutricionApp.Frontend.Pages.Nutricionistas.EliminarModel
 @{
 }
+
 <br>
 <h1>Eliminar Datos del Nutricionista</h1>
 <br>
@@ -89,9 +90,14 @@
         <label>Contraseña</label>
       </div>
       <div class="col-md-4">
-        <input asp-for="Nutricionista.Contrasena" class="form-control" required>
+        <input asp-for="Nutricionista.Contrasena" class="form-control" type="password" required>
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Eliminar Información</button>
+  <div class="col-12">
+    <br>
+    <button type="submit" class="btn btn-primary">Eliminar Información</button>
+    <a asp-page="Lista" class="btn btn-success" form-control>Atrás</a>
+  </div>
+
 </form>

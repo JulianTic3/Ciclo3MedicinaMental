@@ -42,8 +42,6 @@ namespace NutricionApp.Persistencia
         SugerenciaEncontrado.Id = SugerenciaCuidado.Id;
         SugerenciaEncontrado.Fecha = SugerenciaCuidado.Fecha;
         SugerenciaEncontrado.Descripcion = SugerenciaCuidado.Descripcion;
-        SugerenciaEncontrado.Historia = SugerenciaCuidado.Historia;
-        SugerenciaEncontrado.Nutricionista = SugerenciaCuidado.Nutricionista;
 
         _appContext.SaveChanges();
       }

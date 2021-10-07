@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.frontend\\NutricionApp.Frontend.csproj": {}
+    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.frontend\\NutricionApp.Frontend.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
+    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj",
+        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj",
         "projectName": "NutricionApp.Dominio",
-        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj",
+        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\obj\\",
+        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -57,14 +61,14 @@
         }
       }
     },
-    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.frontend\\NutricionApp.Frontend.csproj": {
+    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.frontend\\NutricionApp.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.frontend\\NutricionApp.Frontend.csproj",
+        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.frontend\\NutricionApp.Frontend.csproj",
         "projectName": "NutricionApp.Frontend",
-        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.frontend\\NutricionApp.Frontend.csproj",
+        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.frontend\\NutricionApp.Frontend.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.frontend\\obj\\",
+        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,11 +82,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
-                "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj"
+              "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
+                "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj"
               },
-              "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj": {
-                "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj"
+              "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj": {
+                "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj"
               }
             }
           }
@@ -117,14 +121,14 @@
         }
       }
     },
-    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj": {
+    "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj",
+        "projectUniqueName": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj",
         "projectName": "NutricionApp.Persistencia",
-        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj",
+        "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.persistencia\\NutricionApp.Persistencia.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.persistencia\\obj\\",
+        "outputPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -138,8 +142,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
-                "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\NUTRICIONAPP\\nutricionapp.dominio\\NutricionApp.Dominio.csproj"
+              "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj": {
+                "projectPath": "D:\\Documentos\\Julian Marin\\Programacion\\Nutricion\\Ciclo3SeguimientoNutricional\\nutricionapp\\nutricionapp.dominio\\NutricionApp.Dominio.csproj"
               }
             }
           }
