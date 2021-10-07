@@ -1,0 +1,7 @@
+#Ignorar los folders OBJ y BIN
+**/obj
+**/bin
+
+# Ignorar los archivos:
+
+*.cache
