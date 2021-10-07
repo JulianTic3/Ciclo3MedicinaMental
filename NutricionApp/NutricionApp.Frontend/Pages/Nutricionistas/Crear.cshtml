@@ -1,0 +1,91 @@
+﻿@page
+@model NutricionApp.Frontend.Pages.Nutricionistas.CrearModel
+@{
+}
+<h1>Registro del Nutricionista</h1>
+<br>
+<br>
+
+<form method="post">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Identificación</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="Nutricionista.Identificacion" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Nombres</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="Nutricionista.Nombre" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Apellidos</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="Nutricionista.Apellidos" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-3">
+        <label>Correo Electrónico</label>
+      </div>
+      <div class="col-md-3">
+        <input asp-for="Nutricionista.Correo" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Teléfono</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="Nutricionista.Telefono" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-3">
+        <label>Tarjeta Profesional</label>
+      </div>
+      <div class="col-md-3">
+        <input asp-for="Nutricionista.TarjetaProfesional" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Contraseña</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="Nutricionista.Contrasena" class="form-control" type="password" required>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <button type="submit" class="btn btn-primary">Guardar Datos</button>
+  <a asp-page="Lista" class="btn btn-success" form-control>Atrás</a>
+  </div>
+</form>

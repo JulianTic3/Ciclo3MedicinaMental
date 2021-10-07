@@ -1,0 +1,26 @@
+﻿@page
+@model NutricionApp.Frontend.Pages.CoachModel
+@{
+}
+
+<h1>Lista de pacientes</h1><br>
+<!--para crear el boton que crea un nuevo coach.-->
+<a class="btn btn-primary" asp.page="./lista">Registrar nuevo Coach</a>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Telefono</th>
+    </tr>
+  </thead>
+  @foreach (var p in Model.Coaches)
+  {
+    <tr>
+      <td>@p.Nombre</td>
+      <td>@p.Apellidos</td>
+      <td>@p.Telefono</td>
+    </tr>
+  }
+</table>

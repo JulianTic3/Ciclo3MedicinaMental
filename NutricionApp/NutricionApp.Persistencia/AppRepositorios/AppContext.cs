@@ -1,5 +1,7 @@
+using System;
 using NutricionApp.Dominio;
 using Microsoft.EntityFrameworkCore;
+
 namespace NutricionApp.Persistencia
 {
   public class AppContext : DbContext
