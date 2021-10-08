@@ -32,12 +32,7 @@ namespace NutricionApp.Persistencia.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PacienteId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("PacienteId");
 
                     b.ToTable("Historias");
                 });
@@ -91,17 +86,12 @@ namespace NutricionApp.Persistencia.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("HistoriaId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("NutricionistaId")
+                    b.Property<int?>("PacienteId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HistoriaId");
-
-                    b.HasIndex("NutricionistaId");
+                    b.HasIndex("PacienteId");
 
                     b.ToTable("SugerenciasCuidados");
                 });
@@ -122,7 +112,7 @@ namespace NutricionApp.Persistencia.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("HistoriaId")
+                    b.Property<int?>("PacienteId")
                         .HasColumnType("int");
 
                     b.Property<float>("Peso")
@@ -130,7 +120,7 @@ namespace NutricionApp.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HistoriaId");
+                    b.HasIndex("PacienteId");
 
                     b.ToTable("Valoraciones");
                 });
@@ -140,10 +130,14 @@ namespace NutricionApp.Persistencia.Migrations
                     b.HasBaseType("NutricionApp.Dominio.Persona");
 
                     b.Property<string>("Especialidad")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("NumeroCertificacion")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasDiscriminator().HasValue("Coach");
                 });
@@ -153,7 +147,9 @@ namespace NutricionApp.Persistencia.Migrations
                     b.HasBaseType("NutricionApp.Dominio.Persona");
 
                     b.Property<string>("TarjetaProfesional")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.HasDiscriminator().HasValue("Nutricionista");
                 });
@@ -174,8 +170,11 @@ namespace NutricionApp.Persistencia.Migrations
                     b.Property<DateTime>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Genero")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Genero")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("HistoriaId")
+                        .HasColumnType("int");
 
                     b.Property<float>("Latitud")
                         .HasColumnType("real");
@@ -188,42 +187,25 @@ namespace NutricionApp.Persistencia.Migrations
 
                     b.HasIndex("CoachId");
 
+                    b.HasIndex("HistoriaId");
+
                     b.HasIndex("NutricionistaId");
 
                     b.HasDiscriminator().HasValue("Paciente");
                 });
 
-            modelBuilder.Entity("NutricionApp.Dominio.Historia", b =>
-                {
-                    b.HasOne("NutricionApp.Dominio.Paciente", "Paciente")
-                        .WithMany()
-                        .HasForeignKey("PacienteId");
-
-                    b.Navigation("Paciente");
-                });
-
             modelBuilder.Entity("NutricionApp.Dominio.SugerenciaCuidado", b =>
                 {
-                    b.HasOne("NutricionApp.Dominio.Historia", "Historia")
-                        .WithMany()
-                        .HasForeignKey("HistoriaId");
-
-                    b.HasOne("NutricionApp.Dominio.Nutricionista", "Nutricionista")
-                        .WithMany()
-                        .HasForeignKey("NutricionistaId");
-
-                    b.Navigation("Historia");
-
-                    b.Navigation("Nutricionista");
+                    b.HasOne("NutricionApp.Dominio.Paciente", null)
+                        .WithMany("SugerenciasCuidados")
+                        .HasForeignKey("PacienteId");
                 });
 
             modelBuilder.Entity("NutricionApp.Dominio.Valoracion", b =>
                 {
-                    b.HasOne("NutricionApp.Dominio.Historia", "Historia")
-                        .WithMany()
-                        .HasForeignKey("HistoriaId");
-
-                    b.Navigation("Historia");
+                    b.HasOne("NutricionApp.Dominio.Paciente", null)
+                        .WithMany("Valoraciones")
+                        .HasForeignKey("PacienteId");
                 });
 
             modelBuilder.Entity("NutricionApp.Dominio.Paciente", b =>
@@ -232,13 +214,26 @@ namespace NutricionApp.Persistencia.Migrations
                         .WithMany()
                         .HasForeignKey("CoachId");
 
+                    b.HasOne("NutricionApp.Dominio.Historia", "Historia")
+                        .WithMany()
+                        .HasForeignKey("HistoriaId");
+
                     b.HasOne("NutricionApp.Dominio.Nutricionista", "Nutricionista")
                         .WithMany()
                         .HasForeignKey("NutricionistaId");
 
                     b.Navigation("Coach");
 
+                    b.Navigation("Historia");
+
                     b.Navigation("Nutricionista");
+                });
+
+            modelBuilder.Entity("NutricionApp.Dominio.Paciente", b =>
+                {
+                    b.Navigation("SugerenciasCuidados");
+
+                    b.Navigation("Valoraciones");
                 });
 #pragma warning restore 612, 618
         }

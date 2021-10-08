@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NutricionApp.Dominio;
+
 namespace NutricionApp.Persistencia
 {
     public class RepositorioValoracion : IRepositorioValoracion
@@ -45,7 +46,6 @@ namespace NutricionApp.Persistencia
                 valoracionEncontrado.Peso = valoracion.Peso;
                 valoracionEncontrado.Estatura = valoracion.Estatura;
                 valoracionEncontrado.CaloriasConsumidas = valoracion.CaloriasConsumidas;
-                valoracionEncontrado.Historia = valoracion.Historia;
                 _appContext.SaveChanges();
             }
             return valoracionEncontrado;
