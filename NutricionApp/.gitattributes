@@ -1,0 +1,3 @@
+# Evita leer los archivos .ico como texto
+
+*.ico -text
