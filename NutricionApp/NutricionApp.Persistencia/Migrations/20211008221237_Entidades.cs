@@ -8,6 +8,20 @@ namespace NutricionApp.Persistencia.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Historias",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Diagnostico = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Historias", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Personas",
                 columns: table => new
                 {
@@ -20,21 +34,28 @@ namespace NutricionApp.Persistencia.Migrations
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Contrasena = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Especialidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NumeroCertificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Especialidad = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: true),
+                    NumeroCertificacion = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    TarjetaProfesional = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Genero = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Genero = table.Column<int>(type: "int", nullable: true),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Latitud = table.Column<float>(type: "real", nullable: true),
                     Longitud = table.Column<float>(type: "real", nullable: true),
                     NutricionistaId = table.Column<int>(type: "int", nullable: true),
-                    CoachId = table.Column<int>(type: "int", nullable: true)
+                    CoachId = table.Column<int>(type: "int", nullable: true),
+                    HistoriaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Personas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Personas_Historias_HistoriaId",
+                        column: x => x.HistoriaId,
+                        principalTable: "Historias",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Personas_Personas_CoachId",
                         column: x => x.CoachId,
@@ -50,27 +71,6 @@ namespace NutricionApp.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Historias",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Diagnostico = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PacienteId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Historias", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Historias_Personas_PacienteId",
-                        column: x => x.PacienteId,
-                        principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "SugerenciasCuidados",
                 columns: table => new
                 {
@@ -78,21 +78,14 @@ namespace NutricionApp.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HistoriaId = table.Column<int>(type: "int", nullable: true),
-                    NutricionistaId = table.Column<int>(type: "int", nullable: true)
+                    PacienteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SugerenciasCuidados", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SugerenciasCuidados_Historias_HistoriaId",
-                        column: x => x.HistoriaId,
-                        principalTable: "Historias",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_SugerenciasCuidados_Personas_NutricionistaId",
-                        column: x => x.NutricionistaId,
+                        name: "FK_SugerenciasCuidados_Personas_PacienteId",
+                        column: x => x.PacienteId,
                         principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -108,23 +101,18 @@ namespace NutricionApp.Persistencia.Migrations
                     Peso = table.Column<float>(type: "real", nullable: false),
                     Estatura = table.Column<float>(type: "real", nullable: false),
                     CaloriasConsumidas = table.Column<float>(type: "real", nullable: false),
-                    HistoriaId = table.Column<int>(type: "int", nullable: true)
+                    PacienteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Valoraciones", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Valoraciones_Historias_HistoriaId",
-                        column: x => x.HistoriaId,
-                        principalTable: "Historias",
+                        name: "FK_Valoraciones_Personas_PacienteId",
+                        column: x => x.PacienteId,
+                        principalTable: "Personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Historias_PacienteId",
-                table: "Historias",
-                column: "PacienteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Personas_CoachId",
@@ -132,24 +120,24 @@ namespace NutricionApp.Persistencia.Migrations
                 column: "CoachId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Personas_HistoriaId",
+                table: "Personas",
+                column: "HistoriaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Personas_NutricionistaId",
                 table: "Personas",
                 column: "NutricionistaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SugerenciasCuidados_HistoriaId",
+                name: "IX_SugerenciasCuidados_PacienteId",
                 table: "SugerenciasCuidados",
-                column: "HistoriaId");
+                column: "PacienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SugerenciasCuidados_NutricionistaId",
-                table: "SugerenciasCuidados",
-                column: "NutricionistaId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Valoraciones_HistoriaId",
+                name: "IX_Valoraciones_PacienteId",
                 table: "Valoraciones",
-                column: "HistoriaId");
+                column: "PacienteId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -161,10 +149,10 @@ namespace NutricionApp.Persistencia.Migrations
                 name: "Valoraciones");
 
             migrationBuilder.DropTable(
-                name: "Historias");
+                name: "Personas");
 
             migrationBuilder.DropTable(
-                name: "Personas");
+                name: "Historias");
         }
     }
 }
