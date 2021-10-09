@@ -1,10 +1,9 @@
 ﻿@page
 @using NutricionApp.Dominio
-@model NutricionApp.Frontend.Pages.ActualizarModel
+@model NutricionApp.Frontend.Pages.EliminarModel
 @{
 }
-<h2 class="text-info">Actualizacion de Datos Coach</h2>
-
+<h2 class="text-info">Eliminar Coach</h2>
 <form method="post">
     <div>
         <label asp-for="Coach.Id"></label>
@@ -54,13 +53,11 @@
     <div class="form-group">
                   <div class="row">
                       <div class="col-sm-2 offset-sm-2">
-                          <input type="submit" value="Actualizar" class="btn btn-primary form-control">
+                          <input type="submit" value="Eliminar" class="btn btn-primary form-control">
                       </div> 
                        <div class="col-sm-2">
-                          <a class="btn btn-success form-control" asp-page="./Consulta">Regresar</a>
+                          <a class="btn btn-success form-control" asp-page="/Consulta">Regresar</a>
                        </div>
                   </div>
     </div>
-
-
 </form>
