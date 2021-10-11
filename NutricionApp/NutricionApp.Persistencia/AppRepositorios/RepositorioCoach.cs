@@ -10,13 +10,13 @@ namespace NutricionApp.Persistencia
         
         Coach IRepositorioCoach.AddCoach(Coach coach)
         {
-            var coachAdd=_appContext.Coach.Add(coach);
+            var coachAdd=_appContext.Coachs.Add(coach);
             _appContext.SaveChanges();
             return coachAdd.Entity;
         }
         Coach IRepositorioCoach.UpdateCoach(Coach coach)
         {
-             var coachBusqueda=_appContext.Coach.FirstOrDefault(p => p.Id==coach.Id);
+             var coachBusqueda=_appContext.Coachs.FirstOrDefault(p => p.Id==coach.Id);
             if(coachBusqueda!=null)
             {
                 coachBusqueda.Nombre=coach.Nombre;
@@ -24,7 +24,7 @@ namespace NutricionApp.Persistencia
                 coachBusqueda.Apellidos=coach.Apellidos;
                 coachBusqueda.Telefono=coach.Telefono;
                 coachBusqueda.Correo=coach.Correo;
-                coachBusqueda.Contraseña=coach.Contraseña;
+                coachBusqueda.Contrasena=coach.Contrasena;
                 coachBusqueda.Especialidad=coach.Especialidad;
                 coachBusqueda.NumeroCertificacion=coach.NumeroCertificacion;
                 
@@ -34,20 +34,20 @@ namespace NutricionApp.Persistencia
         }
         void IRepositorioCoach.DeleteCoach(int IdCoach)
         {
-            var coachBusqueda=_appContext.Coach.FirstOrDefault(p => p.Id==IdCoach);
+            var coachBusqueda=_appContext.Coachs.FirstOrDefault(p => p.Id==IdCoach);
             if(coachBusqueda==null)
             return;
-            _appContext.Coach.Remove(coachBusqueda);
+            _appContext.Coachs.Remove(coachBusqueda);
             _appContext.SaveChanges();
         }
         Coach IRepositorioCoach.GetCoach(int IdCoach)
         {
-            var coachBusqueda=_appContext.Coach.FirstOrDefault(p => p.Id==IdCoach);
+            var coachBusqueda=_appContext.Coachs.FirstOrDefault(p => p.Id==IdCoach);
             return coachBusqueda;
         }
         IEnumerable<Coach> IRepositorioCoach.GetAllCoach()
         {
-            return _appContext.Coach;
+            return _appContext.Coachs;
         }
     }
 }
