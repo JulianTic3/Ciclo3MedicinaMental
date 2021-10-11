@@ -18,7 +18,7 @@ namespace NutricionApp.Frontend.Pages
         {
             this.repoCoach=repoCoach;
         }
-        public void OnGet()//metodo ONGet sollo sive para  llevar datos desde el backend hasta el frotnend
+        public void OnGet()//metodo ONGet solo sive para  llevar datos desde el backend hasta el frotnend
         {
             coach=new Coach();
         }

@@ -22,7 +22,7 @@ namespace NutricionApp.Frontend.Pages
 
     public void OnGet()
     {
-      // Coaches = _RepoCoach.GetAllCoachs();
+      Coaches = _RepoCoach.GetAllCoachs();
     }
   }
 }
