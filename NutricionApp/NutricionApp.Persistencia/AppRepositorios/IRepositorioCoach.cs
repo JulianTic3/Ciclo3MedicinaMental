@@ -6,10 +6,10 @@ namespace NutricionApp.Persistencia
 {
   public interface IRepositorioCoach
   {
-    IEnumerable<Coach> GetAllCoachs();
+    IEnumerable<Coach> GetAllCoach();
     Coach AddCoach(Coach coach);
-    Coach GetCoach(int idCoach);
+    Coach GetCoach(int IdCoach);
     Coach UpdateCoach(Coach coach);
-    void DeleteCoach(int idCoach);
+    void DeleteCoach(int IdCoach);
   }
 }
