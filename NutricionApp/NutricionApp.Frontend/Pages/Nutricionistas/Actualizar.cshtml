@@ -14,7 +14,7 @@
         <label>Id</label>
       </div>
       <div class="col-md-1">
-        <input asp-for="Nutricionista.Id" class="form-control" readonly required>
+        <input asp-for="Nutricionista.Id" id="Id" class="form-control" readonly>
       </div>
     </div>
   </div>
@@ -99,5 +99,6 @@
     <br>
     <button type="submit" class="btn btn-primary">Actualizar Información</button>
     <a asp-page="Lista" class="btn btn-success" form-control>Atrás</a>
+    <td><a class="btn btn-info" asp-page="./PacientesNutricionista" asp-route-Id="Id">Mis Pacientes</a></td>
   </div>
 </form>

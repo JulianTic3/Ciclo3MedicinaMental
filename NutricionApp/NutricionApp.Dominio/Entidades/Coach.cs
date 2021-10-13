@@ -6,7 +6,7 @@ namespace NutricionApp.Dominio
   {
     [Required, StringLength(40)]
     public string Especialidad { get; set; }
-    [Required, StringLength(20)]
+    [Required, StringLength(15)]
     public string NumeroCertificacion { get; set; }
   }
 }

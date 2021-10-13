@@ -33,7 +33,7 @@ namespace NutricionApp.Frontend.Pages
         public IActionResult OnPost(Coach coach)
         {
             repoCoach.UpdateCoach(coach);
-            return RedirectToPage("Index");
+            return RedirectToPage("Consulta");
         }
     }
 }

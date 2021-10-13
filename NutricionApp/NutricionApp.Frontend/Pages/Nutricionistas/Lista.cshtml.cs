@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NutricionApp.Persistencia;
 using NutricionApp.Dominio;
-using NutricionApp.Persistencia;
 
 namespace NutricionApp.Frontend.Pages.Nutricionistas
 {

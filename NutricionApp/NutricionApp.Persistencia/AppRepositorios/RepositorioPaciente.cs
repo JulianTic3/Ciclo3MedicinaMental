@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NutricionApp.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace NutricionApp.Persistencia
 {
@@ -91,5 +92,11 @@ namespace NutricionApp.Persistencia
       }
       return PacienteEncontrado;
     }
-  }
+
+    public IEnumerable<Paciente> GetPacientesNutricionista(int IdNutricionista)
+    {
+      return _appContext.Pacientes.Where(p => p.Nutricionista.Id == IdNutricionista).ToList();
+
+    }
+  } // lo que se quiere es obtener una lista de pacientes que esten asignados a un nutrcionista en especial
 }

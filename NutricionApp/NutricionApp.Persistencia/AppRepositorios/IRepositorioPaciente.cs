@@ -7,6 +7,7 @@ namespace NutricionApp.Persistencia
   public interface IRepositorioPaciente
   {
     IEnumerable<Paciente> AllPacientes();
+    IEnumerable<Paciente> GetPacientesNutricionista(int IdNutricionista);
     Paciente AddPaciente(Paciente Paciente);
     Paciente UpdatePaciente(Paciente Paciente);
     void DeletePaciente(int IdPaciente);
