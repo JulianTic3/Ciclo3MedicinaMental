@@ -6,8 +6,9 @@ namespace NutricionApp.Consola
 {
   class Program
   {
-    private static IRepositorioPaciente _RepoPaciente = new RepositorioPaciente(new NutricionApp.Persistencia.AppContext());
-    private static IRepositorioNutricionista _RepoNutricionista = new RepositorioNutricionista(new NutricionApp.Persistencia.AppContext());
+    private static IRepositorioPaciente _RepoPaciente = new RepositorioPaciente();
+    private static IRepositorioNutricionista _RepoNutricionista = new RepositorioNutricionista();
+    private static IRepositorioPersona _RepoPersona = new RepositorioPersona();
     static void Main(string[] args)
     {
       Console.WriteLine("Hello World! Probando el MAIN");
@@ -18,6 +19,7 @@ namespace NutricionApp.Consola
       //AddNutricionista();
       //AsignarNutricionista(3, 4);
       //listaPacientesnu(7);
+      GetPersona(12654963);
     }
     private static void AddPaciente()
     {
@@ -77,9 +79,10 @@ namespace NutricionApp.Consola
     {
       _RepoPaciente.AsignarNutricionista(3, 4);
     }
-    private static void listaPacientesnu(int IdNutricionista)
+    private static void GetPersona(int cedula)
     {
-      _RepoPaciente.GetPacientesNutricionista(7);
+      var Persona = _RepoPersona.GetPersona(cedula);
+      Console.WriteLine(Persona.Nombre + " " + Persona.Discriminator);
     }
   }
 }

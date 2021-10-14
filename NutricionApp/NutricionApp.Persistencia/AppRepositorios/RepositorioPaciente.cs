@@ -93,10 +93,30 @@ namespace NutricionApp.Persistencia
       return PacienteEncontrado;
     }
 
-    public IEnumerable<Paciente> GetPacientesNutricionista(int IdNutricionista)
+    public IEnumerable<Paciente> GetPacientesNutricionista(int id)
     {
-      return _appContext.Pacientes.Where(p => p.Nutricionista.Id == IdNutricionista).ToList();
-
+      var paciente = _appContext.Pacientes.Where(p => p.Nutricionista.Id == id).ToList();
+      return paciente;
+      // retorna la lista de pacientes que esten asignados a un nutrcionista en especial
     }
-  } // lo que se quiere es obtener una lista de pacientes que esten asignados a un nutrcionista en especial
+
+    public IEnumerable<Valoracion> GetValoracionPaciente(int PacienteId)
+    {
+      var paciente = _appContext.Pacientes.Where(p => p.Id == PacienteId).Include(p => p.Valoraciones).FirstOrDefault();
+      return paciente.Valoraciones;
+      // este método debe retornar la lista de las valoraciones de un paciente especifico
+    }
+    public IEnumerable<SugerenciaCuidado> GetSugerenciasCuidado(int PacienteId)
+    {
+      var paciente = _appContext.Pacientes.Where(p => p.Id == PacienteId).Include(p => p.SugerenciasCuidados).FirstOrDefault();
+      return paciente.SugerenciasCuidados;
+      // este método debe retornar la lista de las sugerencias de un paciente especifico
+    }
+    public IEnumerable<Historia> GetHistoriaClinica(int id)
+    {
+      var historia = _appContext.Historias.Where(h => h.Id == id).ToList();
+      return historia;
+      // este método debe retornar la lista de las anotaciones en la historia clinia de un paciente especifico
+    }
+  }
 }

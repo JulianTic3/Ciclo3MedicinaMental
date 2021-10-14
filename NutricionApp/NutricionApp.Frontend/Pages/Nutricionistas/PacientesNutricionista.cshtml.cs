@@ -12,14 +12,18 @@ namespace NutricionApp.Frontend.Pages.Nutricionistas
   public class PacientesNutricionistaModel : PageModel
   {
     private readonly IRepositorioPaciente _RepoPaciente;
+    private readonly IRepositorioNutricionista _RepoNutricionista;
     public IEnumerable<Paciente> Pacientes { get; set; }
-    public PacientesNutricionistaModel(IRepositorioPaciente _RepoPaciente)
+    public Nutricionista Nutricionista { get; set; }
+    public PacientesNutricionistaModel(IRepositorioPaciente _RepoPaciente, IRepositorioNutricionista _RepoNutricionista)
     {
       this._RepoPaciente = _RepoPaciente;
+      this._RepoNutricionista = _RepoNutricionista;
     }
-    public IActionResult OnGet(int IdNutricionista)
+    public IActionResult OnGet(int id)
     {
-      Pacientes = _RepoPaciente.GetPacientesNutricionista(IdNutricionista);
+      Nutricionista = _RepoNutricionista.GetNutricionista(id);
+      Pacientes = _RepoPaciente.GetPacientesNutricionista(id);
       if (Pacientes == null)
       {
         return NotFound();

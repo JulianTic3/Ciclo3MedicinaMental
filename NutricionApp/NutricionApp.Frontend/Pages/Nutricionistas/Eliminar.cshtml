@@ -4,7 +4,8 @@
 }
 
 <br>
-<h1>Eliminar Datos del Nutricionista</h1>
+<h5>Estás Seguro de Eliminar la información de:</h5>
+<h4>@Model.Nutricionista.Nombre @Model.Nutricionista.Apellidos</h4>
 <br>
 <form method="post">
   <div class="form-group">
@@ -96,8 +97,8 @@
   </div>
   <div class="col-12">
     <br>
-    <button type="submit" class="btn btn-primary">Eliminar Información</button>
-    <a asp-page="Lista" class="btn btn-success" form-control>Atrás</a>
+    <button type="submit" class="btn btn-primary">Si! Eliminar Información</button>
+    <a asp-page="Lista" class="btn btn-success" form-control>Volver Atrás</a>
   </div>
 
 </form>

@@ -13,5 +13,6 @@ namespace NutricionApp.Dominio
     public string Correo { get; set; }
     public string Telefono { get; set; }
     public string Contrasena { get; set; }
+    public string Discriminator {get;set;}
   }
 }

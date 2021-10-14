@@ -2,14 +2,14 @@
 @model NutricionApp.Frontend.Pages.Nutricionistas.PacientesNutricionistaModel
 @using NutricionApp.Dominio
 @{
+
 }
+<h3></h3>
 
 <div class="text-center">
   <h2>Mis Pacientes</h2>
 </div>
-
-<br>
-<br>
+<h4>@Model.Nutricionista.Nombre @Model.Nutricionista.Apellidos: Nutricionista</h4>
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -30,9 +30,9 @@
         <td>@p.Apellidos</td>
         <td>@p.Correo</td>
         <td>@p.Telefono</td>
-        <td><a class="btn btn-info" asp-page="./PacientesNutricionista" asp-route-Id="@p.Id">Info</a></td>
-        <td><a class="btn btn-secondary" asp-page="./Actualizar" asp-route-Id="@p.Id">Editar</a></td>
-        <td><a class="btn btn-danger" asp-page="./Eliminar" asp-route-Id="@p.Id">Borrar</a></td>
+        <td><a class="btn btn-info" asp-page="/Pacientes/Info" asp-route-Id="@p.Id">Ver Datos</a></td>
+        <td><a class="btn btn-info" asp-page="/Pacientes/ListaV" asp-route-Id="@p.Id">Valoraciones</a></td>
+        <td><a class="btn btn-danger" asp-page="./Eliminar" asp-route-Id="@p.Id">Historia</a></td>
       </tr>
     }
   </tbody>

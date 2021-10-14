@@ -1,10 +1,10 @@
 ﻿@page
 @model NutricionApp.Frontend.Pages.Nutricionistas.ActualizarModel
 @{
-
+  int id = Model.Nutricionista.Id;
 }
-<h1>Actualizar Datos del Nutricionista</h1>
-<br>
+<h4>Actualizar Datos de:</h4>
+<h3>@Model.Nutricionista.Nombre @Model.Nutricionista.Apellidos (Nutricionista)</h3>
 <br>
 
 <form method="post">
@@ -14,7 +14,7 @@
         <label>Id</label>
       </div>
       <div class="col-md-1">
-        <input asp-for="Nutricionista.Id" id="Id" class="form-control" readonly>
+        <input asp-for="Nutricionista.Id" Id="Id" class="form-control" readonly>
       </div>
     </div>
   </div>
@@ -98,7 +98,8 @@
   <div class="col-12">
     <br>
     <button type="submit" class="btn btn-primary">Actualizar Información</button>
-    <a asp-page="Lista" class="btn btn-success" form-control>Atrás</a>
-    <td><a class="btn btn-info" asp-page="./PacientesNutricionista" asp-route-Id="Id">Mis Pacientes</a></td>
+    <td><a class="btn btn-info" asp-page="./PacientesNutricionista" asp-route-id="@id">Mis Pacientes</a></td>
+    <td><input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">
+    </td>
   </div>
 </form>
