@@ -5,9 +5,9 @@
 }
 <div class="row">
     <aside class="navbar col-3 bg-primary flex-column justify-content-start align-items-start">
-        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Datos Personales</a>
-        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Mi historia clínica</a>
-        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Lista de Valoraciones</a>
+        <a asp-page="./Info" class="nav-link text-light" asp-route-id="@Model.Paciente.Id">Datos Personales</a>
+        <a asp-page="./Info" class="nav-link text-light" asp-route-id="@Model.Paciente.Id">Mi historia clínica</a>
+        <a asp-page="./ListaV" class="nav-link text-light" asp-route-PacienteId="@Model.Paciente.Id">Lista de Valoraciones</a>
     </aside>
     <div class="col-8 d-flex flex-wrap ml-2 align-items-start">
         <h2>Asignar Profesionales</h2>

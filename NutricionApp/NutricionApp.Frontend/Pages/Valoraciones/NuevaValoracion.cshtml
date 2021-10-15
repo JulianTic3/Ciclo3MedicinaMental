@@ -6,9 +6,9 @@
 
 <div class="d-flex justify-content-start">
     <aside class="navbar bg-primary flex-column justify-content-start align-items-start w-25">
-        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Datos Personales</a>
-        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Mi historia clínica</a>
-        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Lista de Valoraciones</a>
+        <a asp-page="../Pacientes/Info" class="nav-link text-light" asp-route-id="@Model.Paciente.Id">Datos Personales</a>
+        <a asp-page="../Pacientes/Info" class="nav-link text-light" asp-route-id="@Model.Paciente.Id">Mi historia clínica</a>
+        <a asp-page="../Pacientes/ListaV" class="nav-link text-light" asp-route-id="@Model.Paciente.Id">Lista de Valoraciones</a>
     </aside>
     <div class="d-flex flex-column ml-2 align-items-center">
         <h2>Registro de Valoración Diaria</h2>
@@ -20,25 +20,22 @@
             </div>
             <div class="w-100"></div>
             <div class="form-group col-4">
-                <label asp-for="Valoracion.Peso"></label><span> (Kg)</span>
-                <input type="number" step="0.1" asp-for="Valoracion.Peso"
-                    class="form-control" required />
+                <label asp-for="Peso"></label><span> (Kg)</span>
+                <input type="number" step="0.1" asp-for="Peso" class="form-control" required />
             </div>
             <div class="form-group col-4">
-                <label asp-for="Valoracion.Estatura"></label><span> (Mts)</span>
-                <input type="number" step="0.01" asp-for="Valoracion.Estatura"
-                    class="form-control" required />
+                <label asp-for="Estatura"></label><span> (Mts)</span>
+                <input type="number" step="0.01" asp-for="Estatura" class="form-control" required />
             </div>
             <div class="w-100"></div>
             <div class="form-group col-4">
                 <label>Calorías Consumidas</label>
-                <input type="number" asp-for="Valoracion.CaloriasConsumidas" placeholder="Calorías" class="form-control"
-                    step="0.01" required />
+                <input type="number" step="0.1" asp-for="Calorias" placeholder="Calorías" class="form-control" required />
             </div>
             <div class="w-100"></div>
             <div class="col-4"></div>
-            <input type="hidden" asp-for="Paciente.Id" value="Paciente.Id" readonly/>
-            <input type="submit" class="btn btn-lg btn-primary justify-conte" value="Guardar">
+            <input type="hidden" asp-for="IdPaciente" value="@Model.Paciente.Id" readonly />
+            <input type="submit" class="btn btn-lg btn-primary" value="Guardar">
         </form>
     </div>
 </div>

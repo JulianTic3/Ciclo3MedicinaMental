@@ -8,11 +8,11 @@ namespace NutricionApp.Dominio
     public int Id { get; set; }
     [Required]
     public DateTime Fecha { get; set; }
-    [Required, StringLength(4)]
+    [Required]
     public float Peso { get; set; }
-    [Required, StringLength(4)]
+    [Required]
     public float Estatura { get; set; }
-    [Required, StringLength(5)]
+    [Required]
     public float CaloriasConsumidas { get; set; }
   }
 }

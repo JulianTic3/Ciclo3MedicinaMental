@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NutricionApp.Dominio;
@@ -12,26 +10,43 @@ namespace NutricionApp.Frontend.Pages.Valoraciones
     public class NuevaValoracionModel : PageModel
     {
         private readonly IRepositorioPaciente _repoPaciente;
-        private readonly IRepositorioValoracion _repoValoracion;
         public Paciente Paciente { get; set; }
         public Valoracion Valoracion { get; set; }
+        public string Peso { get; set; }
+        public string Estatura { get; set; }
+        public string Calorias { get; set; }
+        public string IdPaciente { get; set; }
 
         public NuevaValoracionModel(IRepositorioPaciente _repoPaciente, IRepositorioValoracion _repoValoracion)
         {
             this._repoPaciente = _repoPaciente;
-            this._repoValoracion = _repoValoracion;
         }
-        public void OnGet(/*int id*/)
+        public IActionResult OnGet(int Id)
         {
-            Paciente = _repoPaciente.GetPaciente(1);
+            Paciente = _repoPaciente.GetPaciente(Id);
             Valoracion = new Valoracion();
+            return Page();
         }
 
-        public IActionResult OnPost(Valoracion valoracion)
+        public IActionResult OnPost(Valoracion valoracion, string peso, string estatura, string calorias, int idPaciente)
         {
-            
-            _repoValoracion.addValoracion(valoracion);
-            return RedirectToPage("./Pacientes/Index");
+            valoracion.Peso = float.Parse(peso);
+            valoracion.Estatura = float.Parse(estatura);
+            valoracion.CaloriasConsumidas = float.Parse(calorias);
+            Paciente = _repoPaciente.GetPaciente(idPaciente);
+            if (Paciente.Valoraciones != null)
+            {
+                Paciente.Valoraciones.Add(valoracion);
+            }
+            else
+            {
+                Paciente.Valoraciones = new List<Valoracion> {
+                    valoracion
+                };
+            }
+            _repoPaciente.UpdatePaciente(Paciente);
+            return RedirectToPage("../Pacientes/Index");
         }
     }
 }
+
