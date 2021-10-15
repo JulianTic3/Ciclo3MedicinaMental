@@ -37,7 +37,8 @@
         <label>Fecha</label>
       </div>
       <div class="col-md-4">
-        <input asp-for="SugerenciaCuidado.Fecha" class="form-control" required>
+        <input type="date" asp-for="SugerenciaCuidado.Fecha" class="form-control"
+          value="@DateTime.Now.ToString("yyyy-MM-dd")" required />
       </div>
     </div>
   </div>
@@ -52,6 +53,6 @@
       </div>
     </div>
   </div>
-<button class="btn btn-lg btn-primary col-4 mr-5" type="submit">Guardar</button>
-<input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">
+  <button class="btn btn-lg btn-primary col-4 mr-5" type="submit">Guardar</button>
+  <input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">
 </form>
