@@ -1,0 +1,57 @@
+﻿@page
+@using NutricionApp.Dominio
+@model NutricionApp.Frontend.Pages.Pacientes.SugerenciasModel
+@{
+}
+
+<h3>Registro Sugerencias de Cuidado</h3>
+<br>
+
+<form method="post">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Id</label>
+      </div>
+      <div class="col-md-1">
+        <input asp-for="Paciente.Id" Id="Id" class="form-control" readonly>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Identificación</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="Paciente.Nombre" class="form-control" readonly>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Fecha</label>
+      </div>
+      <div class="col-md-4">
+        <input asp-for="SugerenciaCuidado.Fecha" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Descripción</label>
+      </div>
+      <div class="col-md-4">
+        <textarea asp-for="SugerenciaCuidado.Descripcion" class="form-control" rows="4" required></textarea>
+      </div>
+    </div>
+  </div>
+</form>
+
+<button type="submit" class="btn btn-primary">Guardar Registro</button>
+<input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">
