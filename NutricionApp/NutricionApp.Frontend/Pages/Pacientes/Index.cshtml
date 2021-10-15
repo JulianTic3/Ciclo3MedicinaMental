@@ -3,44 +3,76 @@
 @using NutricionApp.Dominio
 @{
 }
-<div class="d-flex justify-content-start">
-    <aside class="navbar bg-primary flex-column justify-content-start align-items-start w-25">
+<div class="row">
+    <aside class="navbar col-3 bg-primary flex-column justify-content-start align-items-start">
         <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Datos Personales</a>
         <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Mi historia clínica</a>
         <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Lista de Valoraciones</a>
     </aside>
-    <div class="d-flex flex-column ml-2 align-items-start">
-        <h2>Mi Nutricionista</h2>
-        <hr>
-        @if (Model.Paciente.Nutricionista == null)
+    <div class="col-8 d-flex flex-wrap ml-2 align-items-start">
+        <h2>Asignar Profesionales</h2>
+        <div class="w-100"></div>
+        @if (Model.Nutricionista.Nombre == null)
         {
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listaNutriModal">Añadir
-                Nutricionista</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listaNutriModal">
+                Añadir Nutricionista
+            </button>
         }
-        else
+        <div class="col-1"></div>
+        @if (Model.Coach.Nombre == null)
         {
-            //<h5>@Model.Paciente.Nutricionista.Nombre @Model.Paciente.Nutricionista.Apellidos</h5>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listaCoachModal">
+                Añadir Coach
+            </button>
         }
-
-        <br>
-        <h2>Mi Coach</h2>
-        <hr>
-
     </div>
+    <div class="col-3"></div>
+    <div class="col-8 d-flex flex-wrap ml-2 align-items-start justify-content-start">
+        <h2>Valoraciones</h2>
+        <div class="w-100"></div>
+        <a asp-route-Id="@Model.Paciente.Id" asp-page="../Valoraciones/NuevaValoracion"
+            class="btn btn-primary">Registrar Valoración</a>
+    </div>
+
 </div>
 <div class="modal fade" tabindex="-1" id="listaNutriModal" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="TitleModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="TitleModal">Lista de Nutricionistas</h5>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="TitleNutriModal">Lista de Nutricionistas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form method="post">
                     <select asp-for="Nutricionista.Id" class="form-control">
                         <option value="0">Seleccione un Nutricionista</option>
-                        @foreach (var item in Model.list)
+                        @foreach (var item in Model.listNutricionista)
+                        {
+                            <option value="@item.Id">@item.Nombre @item.Apellidos</option>
+                        }
+                    </select>
+                    <input asp-for="Paciente.Id" type="hidden" value="@Model.Paciente.Id">
+                    <br>
+                    <input type="submit" value="Guardar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" id="listaCoachModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="TitleModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TitleCoachModal">Lista de Coaches</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <select asp-for="Coach.Id" class="form-control">
+                        <option value="0">Seleccione un Coach</option>
+                        @foreach (var item in Model.listCoaches)
                         {
                             <option value="@item.Id">@item.Nombre @item.Apellidos</option>
                         }
