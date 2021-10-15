@@ -1,7 +1,55 @@
 ﻿@page
 @model NutricionApp.Frontend.Pages.Pacientes.IndexModel
+@using NutricionApp.Dominio
 @{
 }
-<!-- Estoy hay que ajustarlo con Model paciente Id -->
-<a asp-page="./Info"  class="btn btn-primary" asp-route-id="1">Datos Personales</a>
-<a asp-page="./Actualizar" class="btn btn-primary" asp-route-id="1">Actualizar Datos</a>
+<div class="d-flex justify-content-start">
+    <aside class="navbar bg-primary flex-column justify-content-start align-items-start w-25">
+        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Datos Personales</a>
+        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Mi historia clínica</a>
+        <a asp-page="./Info" class="nav-link text-light" asp-route-id="1">Lista de Valoraciones</a>
+    </aside>
+    <div class="d-flex flex-column ml-2 align-items-start">
+        <h2>Mi Nutricionista</h2>
+        <hr>
+        @if (Model.Paciente.Nutricionista == null)
+        {
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#listaNutriModal">Añadir
+                Nutricionista</button>
+        }
+        else
+        {
+            //<h5>@Model.Paciente.Nutricionista.Nombre @Model.Paciente.Nutricionista.Apellidos</h5>
+        }
+
+        <br>
+        <h2>Mi Coach</h2>
+        <hr>
+
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" id="listaNutriModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="TitleModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TitleModal">Lista de Nutricionistas</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <select asp-for="Nutricionista.Id" class="form-control">
+                        <option value="0">Seleccione un Nutricionista</option>
+                        @foreach (var item in Model.list)
+                        {
+                            <option value="@item.Id">@item.Nombre @item.Apellidos</option>
+                        }
+                    </select>
+                    <input asp-for="Paciente.Id" type="hidden" value="@Model.Paciente.Id">
+                    <br>
+                    <input type="submit" value="Guardar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
