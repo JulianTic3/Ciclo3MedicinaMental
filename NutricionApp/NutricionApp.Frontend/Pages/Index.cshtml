@@ -5,8 +5,25 @@
 }
 
 <div class="text-center">
-    <h2 class="display-4">Bienvenido (a)</h2>
+    <h1 class="display-4">NutricionApp</h1>
+    <h2>Iniciar Sesion.</h2>
+
+    <form method="POST">
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" class="col-md-3" required placeholder="Documento de identidad">
+        </div>
+    </form>
+    <form method="POST">
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input class="col-md-3" type="password" placeholder="Contraseña" required>
+        </div>
+
+        
+        <button type="submit" class="btn btn-primary">Iniciar Sesion</button> 
+        <a asp-page="/Registrarse/Registrarse" class="btn btn-secondary">Registrarse</a>
+    </form>
 </div>
-<div class="text-center">
-    <h3>Zona de Registro e Inicio de Sesión</h3>
-</div>
+
+

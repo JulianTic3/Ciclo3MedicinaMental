@@ -7,57 +7,75 @@
 <form method="post">
     <div>
         <label asp-for="Coach.Id"></label>
+        <div class="col-sm-2">
         <input asp-for="Coach.Id" class="form-control" readonly>
+        </div>
         <span asp-validation-for="Coach.Id" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Identificacion"></label>
-        <input asp-for="Coach.Identificacion" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Identificacion" class="form-control" readonly>
+        </div>
         <span asp-validation-for="Coach.Identificacion" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Nombre"></label>
-        <input asp-for="Coach.Nombre" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Nombre" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.Nombre" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Apellidos"></label>
-        <input asp-for="Coach.Apellidos" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Apellidos" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.Apellidos" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Telefono"></label>
-        <input asp-for="Coach.Telefono" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Telefono" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.Telefono" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Correo"></label>
-        <input asp-for="Coach.Correo" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Correo" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.Correo" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Contrasena"></label>
-        <input asp-for="Coach.Contrasena" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Contrasena" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.Contrasena" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Coach.Especialidad"></label>
-        <input asp-for="Coach.Especialidad" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.Especialidad" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.Especialidad" class="text-danger"></span>
     </div>
     <div>
         <label for="NumeroCertificacion">Numero Certificacion</label>
-        <input asp-for="Coach.NumeroCertificacion" class="form-control">
+        <div class="col-sm-2">
+        <input asp-for="Coach.NumeroCertificacion" class="form-control"  readonly>
+        </div>
         <span asp-validation-for="Coach.NumeroCertificacion" class="text-danger"></span>
-    </div> 
+    </div>
     <div class="form-group">
-                  <div class="row">
-                      <div class="col-sm-2 offset-sm-2">
-                          <input type="submit" value="Eliminar" class="btn btn-primary form-control">
-                      </div> 
-                       <div class="col-sm-2">
-                          <a class="btn btn-success form-control" asp-page="/Consulta">Regresar</a>
-                       </div>
-                  </div>
+        <div class="row">
+            <div class="col-sm-2 offset-sm-2">
+                <input type="submit" value="Eliminar" class="btn btn-primary form-control">
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-success form-control" asp-page="Consulta">Regresar</a>
+            </div>
+        </div>
     </div>
 </form>

@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\nutricionapp.Dominio\NutricionApp.Dominio.csproj" />
+    <ProjectReference Include="..\nutricionapp.Persistencia\NutricionApp.Persistencia.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>

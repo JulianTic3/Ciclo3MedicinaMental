@@ -5,7 +5,10 @@
 }
 <h2 class="text-info">Lista De Coach</h2>
 
-<table class="table table-striped border"> 
+<a class="btn btn-primary" asp-page="Registro">Crear nuevo Coach</a>
+<br>
+<br>
+<table class="table table-striped border">
     <thead>
         <tr>
             <th scope="col">Id</th>
@@ -17,8 +20,9 @@
             <th scope="col">Contrasena</th>
             <th scope="col">Especialidad</th>
             <th scope="col">Certificacion</th>
-            <th scope="col">Actualizacion Datos</th>
-            
+            <th scope="col"></th>
+            <th scope="col"></th>
+
         </tr>
     </thead>
     @foreach (var x in Model.Coach)
@@ -34,7 +38,7 @@
             <td>@x.Especialidad</td>
             <td>@x.NumeroCertificacion</td>
             <td><a class="btn btn-secondary" asp-page="./Actualizar" asp-route-id="@x.Id">Actualizar</a></td>
-            <td><a class="btn btn-secondary" asp-page="./Eliminar" asp-route-id="@x.Id">Eliminar</a></td>
+            <td><a class="btn btn-danger" asp-page="./Eliminar" asp-route-id="@x.Id">Eliminar</a></td>
         </tr>
     }
-</table> 
+</table>

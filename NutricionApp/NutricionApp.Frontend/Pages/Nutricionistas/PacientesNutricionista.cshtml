@@ -1,0 +1,41 @@
+﻿@page
+@model NutricionApp.Frontend.Pages.Nutricionistas.PacientesNutricionistaModel
+@using NutricionApp.Dominio
+@{
+
+}
+<h3></h3>
+
+<div class="text-center">
+  <h2>Mis Pacientes</h2>
+</div>
+<h4>Nutricionista: @Model.Nutricionista.Nombre @Model.Nutricionista.Apellidos </h4>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var p in Model.Pacientes)
+    {
+      <tr>
+        <td>@p.Nombre</td>
+        <td>@p.Apellidos</td>
+        <td>@p.Telefono</td>
+        <td><a class="btn btn-info" asp-page="/Pacientes/Info" asp-route-Id="@p.Id">Ver Datos</a></td>
+        <td><a class="btn btn-secondary" asp-page="/Pacientes/ListaV" asp-route-Id="@p.Id">Valoraciones</a></td>
+        <td><a class="btn btn-secondary" asp-page="./Eliminar" asp-route-Id="@p.Id">Historia</a></td>
+        <td><a class="btn btn-danger" asp-page="/Pacientes/Sugerencias" asp-route-Id="@p.Id">Añadir Sugerencia</a></td>
+        <td><a class="btn btn-danger" asp-page="/Pacientes/Sugerencias" asp-route-Id="@p.Id">Añadir Diagnóstico</a></td>
+      </tr>
+    }
+  </tbody>
+</table>

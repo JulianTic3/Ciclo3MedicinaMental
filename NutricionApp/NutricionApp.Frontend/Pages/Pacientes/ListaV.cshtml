@@ -1,0 +1,23 @@
+﻿@page
+@model NutricionApp.Frontend.Pages.Pacientes.ListaVModel
+@{
+  int PacienteId = Model.Paciente.Id;
+}
+
+<h1> Valoraciones del Paciente</h1>
+
+<table class="table">
+  @foreach (var v in Model.Valoraciones)
+  {
+    <tr>
+      <td>@v.Fecha</td>
+      <td>@v.Peso</td>
+      <td>@v.Estatura</td>
+      <td>@v.CaloriasConsumidas</td>
+    </tr>
+  }
+</table>
+
+<a class="btn btn-primary table-btn" asp-page="./Actualizar" asp-rout-PacienteId="@PacienteId">
+<i aria-hidden="true">Regresar</i>
+</a>
