@@ -62,9 +62,9 @@ namespace NutricionApp.Persistencia
       _appContext.SaveChanges();
     }
 
-    public Paciente GetPaciente(int IdPaciente)
+    public Paciente GetPaciente(int id)
     {
-      return _appContext.Pacientes.FirstOrDefault(p => p.Id == IdPaciente);
+      return _appContext.Pacientes.FirstOrDefault(p => p.Id == id);
     }
 
     public Paciente UpdatePaciente(Paciente Paciente)
@@ -118,24 +118,23 @@ namespace NutricionApp.Persistencia
       return historia;
       // este método debe retornar la lista de las anotaciones en la historia clinia de un paciente especifico
     }
-    public void AddSugerencia(int id, SugerenciaCuidado Sugerencia)
+    public void AddSugerencia(int id, SugerenciaCuidado SugerenciaCuidado)
     {
       var paciente = _appContext.Pacientes.Find(id);
-      if (paciente != null)
+      if (paciente !=null)
       {
-        if (paciente.SugerenciasCuidados != null)
+        if (paciente.SugerenciasCuidados !=null)
         {
-          paciente.SugerenciasCuidados.Add(Sugerencia);
+          paciente.SugerenciasCuidados.Add(SugerenciaCuidado);
         }
         else
         {
           paciente.SugerenciasCuidados = new List<SugerenciaCuidado>();
-          paciente.SugerenciasCuidados.Add(Sugerencia);
+          paciente.SugerenciasCuidados.Add(SugerenciaCuidado);
         }
         var PacienteEncontrado = _appContext.Pacientes.Find(paciente.Id);
-        if (PacienteEncontrado != null)
+        if (PacienteEncontrado !=null)
         {
-          PacienteEncontrado.Id = paciente.Id;
           PacienteEncontrado.Nombre = paciente.Nombre;
           PacienteEncontrado.Apellidos = paciente.Apellidos;
           PacienteEncontrado.Identificacion = paciente.Identificacion;

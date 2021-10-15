@@ -27,13 +27,13 @@ namespace NutricionApp.Frontend.Pages.Pacientes
       }
       else
       {
-       return RedirectToPage("./NotFound");
+        return RedirectToPage("./NotFound");
       }
     }
-    public IActionResult OnPost(int id, SugerenciaCuidado sugerenciaCuidado)
+    public IActionResult OnPost(int Id, SugerenciaCuidado SugerenciaCuidado)
     {
-      _repoPaciente.AddSugerencia(id, sugerenciaCuidado);
-      return RedirectToPage("/Nutricionistas/PacientesNutricionista");
+      _repoPaciente.AddSugerencia(Id, SugerenciaCuidado);
+      return RedirectToPage("/Nutricionistas/Lista");
     }
   }
 }
