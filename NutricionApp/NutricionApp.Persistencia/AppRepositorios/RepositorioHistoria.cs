@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using NutricionApp.Dominio;
 using NutricionApp.Persistencia;
 using System.Linq; 
+using System;
 
 namespace NutricionApp.Persistencia
 {
@@ -42,6 +43,12 @@ namespace NutricionApp.Persistencia
         IEnumerable<Historia> IRepositorioHistoria.GetAllHistoria()
         {
             return _appContext.Historias;
+        }
+
+        Historia IRepositorioHistoria.GetHistoriaFromPaciente(int IdPaciente)
+        {
+            var paciente = _appContext.Pacientes.Find(IdPaciente);
+            return paciente.Historia;
         }
     }
 }
