@@ -1,0 +1,38 @@
+﻿@page
+@using NutricionApp.Dominio
+@model NutricionApp.Frontend.Pages.CoachListaModel
+@{
+}
+<div class="text-center">
+<h3>Pacientes Asignados</h3>
+</div>
+<h4>Mis Pacientes: @Model.Coach.Nombre @Model.Coach.Apellidos </h4>
+<table class="table table-striped border">
+  <thead>
+    <tr>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Correo</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var p in Model.Pacientes)
+    {
+      <tr>
+        <td>@p.Nombre</td>
+        <td>@p.Apellidos</td>
+        <td>@p.Telefono</td>
+        <td>@p.Correo</td>
+        <td><a class="btn btn-secondary" asp-page="/Pacientes/Info" asp-route-Id="@p.Id">Ver Datos</a></td>
+        <td><a class="btn btn-secondary" asp-page="./" asp-route-Id="@p.Id">Historia</a></td>
+        <td><a class="btn btn-secondary" asp-page="/Pacientes/ListaV" asp-route-Id="@p.Id">Valoracion</a></td>
+        <td><a class="btn btn-secondary" asp-page="/Pacientes/Sugerencias" asp-route-Id="@p.Id">Sugerencia</a></td>
+      </tr>
+    }
+  </tbody>
+</table>

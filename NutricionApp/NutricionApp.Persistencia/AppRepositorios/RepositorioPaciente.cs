@@ -156,5 +156,10 @@ namespace NutricionApp.Persistencia
     {
 
     }
+    public IEnumerable<Paciente> GetPacientesCoach(int id)
+    {
+      var paciente=_appContext.Pacientes.Where(p => p.Coach.Id==id).ToList();
+      return paciente;
+    }
   }
 }

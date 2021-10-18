@@ -11,6 +11,7 @@ namespace NutricionApp.Persistencia
     IEnumerable<Valoracion> GetValoracionPaciente(int PacienteId);
     IEnumerable<SugerenciaCuidado> GetSugerenciasCuidado(int PacienteId);
     IEnumerable<Historia> GetHistoriaClinica(int id);
+    IEnumerable<Paciente> GetPacientesCoach(int id);
     Paciente AddPaciente(Paciente Paciente);
     Paciente UpdatePaciente(Paciente Paciente);
     void DeletePaciente(int IdPaciente);
