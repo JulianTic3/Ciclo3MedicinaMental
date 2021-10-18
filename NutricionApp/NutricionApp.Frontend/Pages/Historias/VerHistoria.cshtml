@@ -1,0 +1,28 @@
+﻿@page
+@model NutricionApp.Frontend.Pages.Historias.VerHistoriaModel
+@{
+}
+<h2>Historia Clínica</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Diagnóstico
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model.Historia.Fecha
+            </td>
+            <td>
+                @Model.Historia.Diagnostico
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a asp-page="../Index" class="btn btn-primary">Ir a Home</a>

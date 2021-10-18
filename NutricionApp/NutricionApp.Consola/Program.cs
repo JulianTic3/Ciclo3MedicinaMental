@@ -1,6 +1,7 @@
 ﻿using System;
 using NutricionApp.Persistencia;
 using NutricionApp.Dominio;
+using System.Collections.Generic;
 
 namespace NutricionApp.Consola
 {
@@ -19,20 +20,24 @@ namespace NutricionApp.Consola
       //AddNutricionista();
       //AsignarNutricionista(3, 4);
       //listaPacientesnu(7);
-      GetPersona(12654963);
+      //GetPersona(12654963);
     }
     private static void AddPaciente()
     {
       var Paciente = new Paciente
       {
-        Nombre = "Carlos",
-        Apellidos = "Ramirez Lopez",
-        Telefono = "3005695869",
-        Direccion = "calle 25 No. 36-25",
+        Nombre = "Andrea Carolina",
+        Apellidos = "Lopez Lopez",
+        Telefono = "3005695147",
+        Direccion = "calle 36 No. 36-25",
         Latitud = 75.236598F,
         Longitud = 5.265833F,
-        Ciudad = "Manizales",
-        FechaNacimiento = new DateTime(1990, 05, 26)
+        Ciudad = "Pereira",
+        FechaNacimiento = new DateTime(1990, 05, 26),
+        SugerenciasCuidados = new List<SugerenciaCuidado>
+        {
+          new SugerenciaCuidado { Fecha = new DateTime(2021, 10, 22, 11, 00, 0), Descripcion = "tomar ibuprofeno 2 veces al dia" }
+        }
       };
       _RepoPaciente.AddPaciente(Paciente);
     }
@@ -57,7 +62,7 @@ namespace NutricionApp.Consola
         Latitud = 75.236598F,
         Longitud = 5.265833F,
         Ciudad = "Cúcuta",
-        FechaNacimiento = new DateTime(1991, 05, 26)
+        FechaNacimiento = new DateTime(1991, 05, 26),
       };
       _RepoPaciente.UpdatePaciente(Paciente);
     }

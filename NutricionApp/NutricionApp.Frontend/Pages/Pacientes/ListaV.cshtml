@@ -6,7 +6,16 @@
 
 <h1> Valoraciones del Paciente</h1>
 
-<table class="table">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Fecha</th>
+      <th scope="col">Peso</th>
+      <th scope="col">Estatura</th>
+      <th scope="col">Calorias Consumidas</th>
+    </tr>
+  </thead>
+<tbody>
   @foreach (var v in Model.Valoraciones)
   {
     <tr>
@@ -16,8 +25,10 @@
       <td>@v.CaloriasConsumidas</td>
     </tr>
   }
+  </tbody>
 </table>
 
-<a class="btn btn-primary table-btn" asp-page="./Actualizar" asp-rout-PacienteId="@PacienteId">
-<i aria-hidden="true">Regresar</i>
-</a>
+<input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">
+<a class="btn btn-primary table-btn" asp-page="/Nutricionistas/Actualizar" asp-rout-PacienteId="@PacienteId">
+<i aria-hidden="true">Regresar</i></a>
+

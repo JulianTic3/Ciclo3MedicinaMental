@@ -8,7 +8,7 @@ using NutricionApp.Persistencia;
 using NutricionApp.Dominio;
 
 
-namespace NutricionApp.Frontend.Pages
+namespace NutricionApp.Frontend.Pages.Coaches
 {
     public class ConsultaModel : PageModel
  {

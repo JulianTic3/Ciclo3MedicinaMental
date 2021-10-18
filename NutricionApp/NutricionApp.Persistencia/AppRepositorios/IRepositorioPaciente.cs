@@ -18,7 +18,7 @@ namespace NutricionApp.Persistencia
     Paciente GetPaciente(int IdPaciente);
     Nutricionista AsignarNutricionista(int idPaciente, int idNutricionista);
     Coach AsignarCoach(int idPaciente, int idCoach);
-    void AddHistoria(int IdPaciente, Historia Historia);
-    void AddSugerencia(int id, SugerenciaCuidado Sugerencia);
+    Historia AddHistoria(int IdPaciente, Historia Historia);
+    void AddSugerencia(int id, SugerenciaCuidado SugerenciaCuidado);
   }
 }

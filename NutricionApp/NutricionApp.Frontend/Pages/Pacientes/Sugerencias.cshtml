@@ -5,6 +5,7 @@
 }
 
 <h3>Registro Sugerencias de Cuidado</h3>
+<h3>@Model.Paciente.Nombre</h3>
 <br>
 
 <form method="post">
@@ -22,7 +23,7 @@
   <div class="form-group">
     <div class="row">
       <div class="col-md-2">
-        <label>Identificación</label>
+        <label>Nombre</label>
       </div>
       <div class="col-md-4">
         <input asp-for="Paciente.Nombre" class="form-control" readonly>
@@ -36,7 +37,8 @@
         <label>Fecha</label>
       </div>
       <div class="col-md-4">
-        <input asp-for="SugerenciaCuidado.Fecha" class="form-control" required>
+        <input type="date" asp-for="SugerenciaCuidado.Fecha" class="form-control"
+          value="@DateTime.Now.ToString("yyyy-MM-dd")" required />
       </div>
     </div>
   </div>
@@ -51,7 +53,6 @@
       </div>
     </div>
   </div>
+  <button class="btn btn-lg btn-primary col-4 mr-5" type="submit">Guardar</button>
+  <input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">
 </form>
-
-<button type="submit" class="btn btn-primary">Guardar Registro</button>
-<input type="button" class="btn btn-success" onclick="history.back()" name="volver atrás" value="volver atrás">

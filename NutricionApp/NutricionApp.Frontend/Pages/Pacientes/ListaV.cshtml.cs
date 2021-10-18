@@ -15,22 +15,23 @@ namespace NutricionApp.Frontend.Pages.Pacientes
     [BindProperty]
     public Paciente Paciente { get; set; }
     public IEnumerable<Valoracion> Valoraciones { get; set; }
+
     public ListaVModel(IRepositorioPaciente _repoPaciente)
     {
       this._repoPaciente = _repoPaciente;
     }
-    public void OnGet(int? PacienteId)
+    public void OnGet(int? id)
     {
-      if (PacienteId.HasValue)
+      if (id.HasValue)
       {
-        Paciente = _repoPaciente.GetPaciente(PacienteId.Value);
+        Paciente = _repoPaciente.GetPaciente(id.Value);
         if (Paciente == null)
         {
           RedirectToPage("./NotFound");
         }
         else
         {
-          Valoraciones = _repoPaciente.GetValoracionPaciente(PacienteId.Value);
+          Valoraciones = _repoPaciente.GetValoracionPaciente(id.Value);
         }
       }
     }

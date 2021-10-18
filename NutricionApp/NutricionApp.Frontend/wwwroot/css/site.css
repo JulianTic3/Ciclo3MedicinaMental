@@ -19,13 +19,21 @@ a {
   color: rgb(252, 248, 248);
   background-color: #4680FE;
   border-color: #1861ac;
+  border-radius: 20px;
 }
 .btn-danger{
   background-color: #FC6180;
+  border-radius: 20px;
 }
 
 .btn-secondary{
   background-color: #93BE52;
+  border-radius: 20px;
+}
+
+.btn-info{
+  background-color: #2fd6e2;
+  border-radius: 20px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {

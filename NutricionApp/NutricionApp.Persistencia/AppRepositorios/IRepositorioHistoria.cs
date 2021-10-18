@@ -13,5 +13,6 @@ namespace NutricionApp.Persistencia
         void DeleteHistoria(int IdHistoria);
         Historia GetHistoria(int IdHistoria);
         
+        Historia GetHistoriaFromPaciente(int IdPaciente);
     }
 }

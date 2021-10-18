@@ -7,19 +7,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using NutricionApp.Persistencia;
 using NutricionApp.Dominio;
 
-namespace NutricionApp.Frontend.Pages
+
+namespace NutricionApp.Frontend.Pages.Coaches
 {
-    public class EliminarModel : PageModel
- {
-        private readonly IRepositorioCoach repoCoach;
+    public class ActualizarModel : PageModel
+    {
+    private readonly IRepositorioCoach repoCoach;
         public Coach Coach {get; set;}
-        public EliminarModel(IRepositorioCoach repoCoach)
+        public ActualizarModel(IRepositorioCoach repoCoach)
         {
             this.repoCoach=repoCoach;
         }
         public IActionResult OnGet(int id)
         {
-            Coach=repoCoach.GetCoach(id);
+            Coach= repoCoach.GetCoach(id);
             if(Coach==null)
             {
                 return NotFound();
@@ -29,9 +30,9 @@ namespace NutricionApp.Frontend.Pages
                 return Page();
             }
         }
-        public IActionResult OnPost(int id)
+        public IActionResult OnPost(Coach coach)
         {
-            repoCoach.DeleteCoach(id);
+            repoCoach.UpdateCoach(coach);
             return RedirectToPage("Consulta");
         }
     }
