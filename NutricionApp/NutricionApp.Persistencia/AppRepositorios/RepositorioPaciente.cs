@@ -99,8 +99,14 @@ namespace NutricionApp.Persistencia
             return paciente;
             // retorna la lista de pacientes que esten asignados a un nutrcionista en especial
         }
+        public IEnumerable<Paciente> GetPacientesCoach(int id)
+        {
+            var paciente=_appContext.Pacientes.Where(p => p.Coach.Id==id).ToList();
+            return paciente;
+        }
 
         public IEnumerable<Valoracion> GetValoracionPaciente(int PacienteId)
+<<<<<<< HEAD
         {
             var paciente = _appContext.Pacientes.Where(p => p.Id == PacienteId).Include(p => p.Valoraciones).FirstOrDefault();
             return paciente.Valoraciones;
@@ -153,6 +159,60 @@ namespace NutricionApp.Persistencia
         }
         Historia IRepositorioPaciente.AddHistoria(int IdPaciente, Historia historia)
         {
+=======
+        {
+            var paciente = _appContext.Pacientes.Where(p => p.Id == PacienteId).Include(p => p.Valoraciones).FirstOrDefault();
+            return paciente.Valoraciones;
+            // este método debe retornar la lista de las valoraciones de un paciente especifico
+        }
+        public IEnumerable<SugerenciaCuidado> GetSugerenciasCuidado(int PacienteId)
+        {
+            var paciente = _appContext.Pacientes.Where(p => p.Id == PacienteId).Include(p => p.SugerenciasCuidados).FirstOrDefault();
+            return paciente.SugerenciasCuidados;
+            // este método debe retornar la lista de las sugerencias de un paciente especifico
+        }
+        public IEnumerable<Historia> GetHistoriaClinica(int id)
+        {
+            var historia = _appContext.Historias.Where(h => h.Id == id).ToList();
+            return historia;
+            // este método debe retornar la lista de las anotaciones en la historia clinia de un paciente especifico
+        }
+        public void AddSugerencia(int id, SugerenciaCuidado SugerenciaCuidado)
+        {
+            var paciente = _appContext.Pacientes.Find(id);
+            if (paciente != null)
+            {
+                if (paciente.SugerenciasCuidados != null)
+                {
+                    paciente.SugerenciasCuidados.Add(SugerenciaCuidado);
+                }
+                else
+                {
+                    paciente.SugerenciasCuidados = new List<SugerenciaCuidado>();
+                    paciente.SugerenciasCuidados.Add(SugerenciaCuidado);
+                }
+                var PacienteEncontrado = _appContext.Pacientes.Find(paciente.Id);
+                if (PacienteEncontrado != null)
+                {
+                    PacienteEncontrado.Nombre = paciente.Nombre;
+                    PacienteEncontrado.Apellidos = paciente.Apellidos;
+                    PacienteEncontrado.Identificacion = paciente.Identificacion;
+                    PacienteEncontrado.FechaNacimiento = paciente.FechaNacimiento;
+                    PacienteEncontrado.Correo = paciente.Correo;
+                    PacienteEncontrado.Contrasena = paciente.Contrasena;
+                    PacienteEncontrado.Genero = paciente.Genero;
+                    PacienteEncontrado.Ciudad = paciente.Ciudad;
+                    PacienteEncontrado.Direccion = paciente.Direccion;
+                    PacienteEncontrado.Telefono = paciente.Telefono;
+                    PacienteEncontrado.Latitud = paciente.Latitud;
+                    PacienteEncontrado.Longitud = paciente.Longitud;
+                    _appContext.SaveChanges();
+                }
+            }
+        }
+        Historia IRepositorioPaciente.AddHistoria(int IdPaciente, Historia historia)
+        {
+>>>>>>> 8ccedfa06180bef0b8572fcffb84ebc60f6c8b5c
             var paciente = _appContext.Pacientes.Find(IdPaciente);
             if (paciente != null)
             {
@@ -162,11 +222,10 @@ namespace NutricionApp.Persistencia
             }
             return historia;
         }
-        public IEnumerable<Paciente> GetPacientesCoach(int id)
-            {
-                var paciente=_appContext.Pacientes.Where(p => p.Coach.Id==id).ToList();
-                return paciente;
-            }
+<<<<<<< HEAD
     }
 
+=======
+    }
+>>>>>>> 8ccedfa06180bef0b8572fcffb84ebc60f6c8b5c
 }
