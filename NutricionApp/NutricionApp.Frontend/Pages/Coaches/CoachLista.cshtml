@@ -6,7 +6,7 @@
 <div class="text-center">
 <h3>Pacientes Asignados</h3>
 </div>
-<h4>Mis Pacientes: @Model.Coach.Nombre @Model.Coach.Apellidos </h4>
+<h4>Mis Pacientes: @Model.coach.Nombre @Model.coach.Apellidos </h4>
 <table class="table table-striped border">
   <thead>
     <tr>
@@ -21,7 +21,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach (var p in Model.Pacientes)
+    @foreach (var p in Model.paciente)
     {
       <tr>
         <td>@p.Nombre</td>

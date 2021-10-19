@@ -13,20 +13,20 @@ namespace NutricionApp.Frontend.Pages.Coaches
     {
         private readonly IRepositorioPaciente repoPaciente;
         private readonly IRepositorioCoach repoCoach;
-        IEnumerable<Paciente> paciente {get; set;}
+        public IEnumerable<Paciente> paciente {get; set;}
         public Coach coach {get; set;}
-        public GetPacientesCoachModel(IRepositorioPaciente repoPaciente,IRepositorioCoach repoCoach)
+        public CoachListaModel(IRepositorioPaciente repoPaciente,IRepositorioCoach repoCoach)
         {
             this.repoPaciente=repoPaciente;
             this.repoCoach=repoCoach;
         }
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             paciente=repoPaciente.GetPacientesCoach(id);
-            coach=repoPaciente.GetCoach(id);
+            coach=repoCoach.GetCoach(id);
             if(paciente==null)
             {
-                return NotFound;
+                return NotFound();
             }
             else
             {
