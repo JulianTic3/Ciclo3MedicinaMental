@@ -25,7 +25,7 @@ namespace NutricionApp.Frontend.Pages.Coaches
         public IActionResult OnPost(Coach coach)//metodo q me sive para llevar los datos desde el frontend a la base de datos 
         {
             repoCoach.AddCoach(coach);
-            return RedirectToPage("./Consulta");
+            return RedirectToPage("Consulta");
         }
     }
 }
