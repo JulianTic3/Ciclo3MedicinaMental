@@ -14,7 +14,7 @@ namespace NutricionApp.Frontend.Pages
     {
         private readonly IRepositorioPersona _repoPersona;
         public Persona Persona { set; get; }
-        public string id { set; get; }
+        public string id { get; set; }
         
         public IndexModel(IRepositorioPersona _repoPersona)
         {
@@ -38,7 +38,7 @@ namespace NutricionApp.Frontend.Pages
                 }
                 else
                 {
-                  return RedirectToPage("/Pacientes/Lista");
+                  return RedirectToPage("/Pacientes/Index", new {id=Persona.Id});
                 }
 
             }

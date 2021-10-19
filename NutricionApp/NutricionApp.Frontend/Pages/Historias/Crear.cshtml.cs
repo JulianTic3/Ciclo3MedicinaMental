@@ -30,7 +30,7 @@ namespace NutricionApp.Frontend.Pages.Historias
         public IActionResult OnPost(Paciente paciente, Historia historia)
         {
             Historia = _repoPaciente.AddHistoria(paciente.Id, historia);
-            return RedirectToPage("VerHistoria?id="+paciente.Id+"&historia="+Historia.Id);
+            return RedirectToPage("VerHistoria", new {id = paciente.Id, historia = Historia.Id});
         }
     }
 }

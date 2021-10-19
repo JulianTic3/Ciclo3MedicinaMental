@@ -1,5 +1,6 @@
 ﻿@page
-@model IndexModel
+@model NutricionApp.Frontend.Pages.IndexModel
+@using NutricionApp.Dominio
 @{
     ViewData["Title"] = "Home page";
 }
@@ -11,19 +12,14 @@
     <form method="POST">
         <div class="form-group">
             <label>Usuario</label>
-            <input name="id" type="text" class="col-md-3" required placeholder="Documento de identidad">
+            <input asp-for="@Model.id" type="text" class="col-md-3" placeholder="Documento de identidad" required />
         </div>
-    </form>
-    <form method="POST">
         <div class="form-group">
             <label>Contraseña</label>
-            <input class="col-md-3" type="password" placeholder="Contraseña" >
+            <input class="col-md-3" type="password" placeholder="Contraseña">
         </div>
-
-        
-        <button type="submit" class="btn btn-primary">Iniciar Sesion</button> 
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         <a asp-page="/Registrarse/Registrarse" class="btn btn-secondary">Registrarse</a>
     </form>
+
 </div>
-
-
