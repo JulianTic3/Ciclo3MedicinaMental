@@ -29,7 +29,7 @@
         <td>@p.Telefono</td>
         <td>@p.Correo</td>
         <td><a class="btn btn-secondary" asp-page="/Pacientes/Info" asp-route-Id="@p.Id">Ver Datos</a></td>
-        <td><a class="btn btn-secondary" asp-page="./" asp-route-Id="@p.Id">Historia</a></td>
+        <td><a class="btn btn-secondary" asp-page="./Historias/VerHistoria" asp-route-Id="@p.Id">Historia</a></td>
         <td><a class="btn btn-secondary" asp-page="/Pacientes/ListaV" asp-route-Id="@p.Id">Valoracion</a></td>
         <td><a class="btn btn-secondary" asp-page="/Pacientes/Sugerencias" asp-route-Id="@p.Id">Sugerencia</a></td>
       </tr>
