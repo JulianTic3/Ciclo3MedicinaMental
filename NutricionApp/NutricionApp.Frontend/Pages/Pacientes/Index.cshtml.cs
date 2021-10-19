@@ -28,9 +28,9 @@ namespace NutricionApp.Frontend.Pages.Pacientes
             this._repoCoach = _repoCoach;
         }
 
-        public IActionResult OnGet(/*int id*/)
+        public IActionResult OnGet(int id)
         {
-            Paciente = _repoPaciente.GetPaciente(1);
+            Paciente = _repoPaciente.GetPaciente(id);
             listNutricionista = _repoNutricionista.AllNutricionistas();
             listCoaches = _repoCoach.GetAllCoach();
             if (Nutricionista == null)

@@ -30,6 +30,7 @@ namespace NutricionApp.Frontend
       services.AddSingleton<IRepositorioPaciente, RepositorioPaciente>();
       services.AddSingleton<IRepositorioValoracion, RepositorioValoracion>();
       services.AddSingleton<IRepositorioHistoria, RepositorioHistoria>();
+      services.AddSingleton<IRepositorioPersona, RepositorioPersona>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
