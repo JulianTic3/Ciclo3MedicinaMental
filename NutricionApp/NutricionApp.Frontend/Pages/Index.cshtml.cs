@@ -28,23 +28,23 @@ namespace NutricionApp.Frontend.Pages
 
             if (Persona != null)
             {
-                if (Persona.Nombre == "Andres")
+                if (Persona.Discriminator == "Paciente")
                 {
-                    return RedirectToPage("/Privacy");
+                    return RedirectToPage("/Pacientes/Index", new {id=Persona.Id});
                 }
-                if (Persona.Nombre == "Luisa")
+                if (Persona.Discriminator == "Nutricionista")
                 {
-                    return RedirectToPage("/Regitrarse/Registrarse");
+                    return RedirectToPage("/Nutricionistas/PacientesNutricionista", new {id=Persona.Id});
                 }
                 else
                 {
-                  return RedirectToPage("/Pacientes/Index", new {id=Persona.Id});
+                  return RedirectToPage("/Coaches/CoachLista",new {id=Persona.Id});
                 }
 
             }
             else
             {
-                return RedirectToPage("/Coaches/Registro");
+                return RedirectToPage("/NoEncontrado/NoEncontrado");
             }
         }
     }
